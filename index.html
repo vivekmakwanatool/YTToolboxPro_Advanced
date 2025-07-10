@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube Toolbox Pro</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Toolbox Pro</h1>
+
+    <section class="tool">
+      <h2>Thumbnail Downloader</h2>
+      <input id="videoId" type="text" placeholder="Enter YouTube Video ID" />
+      <select id="resolution">
+        <option value="maxresdefault">Max Resolution</option>
+        <option value="hqdefault">High Quality</option>
+        <option value="mqdefault">Medium Quality</option>
+      </select>
+      <button onclick="generateThumbnail()">Preview</button>
+      <div id="thumbnailPreview"></div>
+    </section>
+
+    <section class="tool">
+      <h2>Tag Generator</h2>
+      <input id="tagInput" type="text" placeholder="Enter video topic" />
+      <button onclick="generateTags()">Generate Tags</button>
+      <textarea id="tagOutput" rows="4" readonly></textarea>
+      <button onclick="copyToClipboard('tagOutput')">Copy Tags</button>
+    </section>
+
+    <section class="tool">
+      <h2>Hashtag Generator</h2>
+      <input id="hashtagInput" type="text" placeholder="Enter video topic" />
+      <button onclick="generateHashtags()">Generate Hashtags</button>
+      <textarea id="hashtagOutput" rows="4" readonly></textarea>
+      <button onclick="copyToClipboard('hashtagOutput')">Copy Hashtags</button>
+    </section>
+
+    <div class="toggle-mode">
+      <label><input type="checkbox" id="darkToggle" onchange="toggleDarkMode()"> Dark Mode</label>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
