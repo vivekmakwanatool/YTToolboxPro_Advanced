@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YT Toolbox Pro</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Toolbox Pro</h1>
+    <input type="text" id="videoId" placeholder="Enter YouTube Video ID"/>
+    <button onclick="downloadThumbnail()">Download Thumbnail</button>
+    <button onclick="generateTags()">Generate Tags</button>
+    <button onclick="copyToClipboard()">Copy Tags</button>
+    <div id="loading" style="display:none;">Loading...</div>
+    <div id="thumbnail"></div>
+    <div id="tags"></div>
+    <div id="copiedPopup" style="display:none;">Copied!</div>
+    <button onclick="toggleDarkMode()">Dark Mode</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
